@@ -1,0 +1,52 @@
+Log:
+  Level: none 
+  AccessPath: ./access.log
+  ErrorPath: ./error.log
+DnsConfigPath:
+RouteConfigPath:
+OutboundConfigPath: 
+ConnetionConfig:
+  Handshake: 4 
+  ConnIdle: 30 
+  UplinkOnly: 2
+  DownlinkOnly: 4 
+  BufferSize: 64 
+Nodes:
+  -
+    PanelType: "V2board"
+    ApiConfig:
+      ApiHost: "https://hello4g.tk"
+      ApiKey: "Poklm9xc@Poklm9xc@1"
+      NodeID: 1
+      NodeType: V2ray 
+      Timeout: 30
+      EnableVless: false 
+      EnableXTLS: false 
+      SpeedLimit: 0
+      DeviceLimit: 1 
+      RuleListPath: 
+    ControllerConfig:
+      DisableSniffing: true
+      ListenIP: 0.0.0.0 
+      SendIP: 0.0.0.0 
+      UpdatePeriodic: 60 
+      EnableDNS: false 
+      DNSType: AsIs 
+      EnableProxyProtocol: false
+      EnableFallback: false 
+      FallBackConfigs:  
+        -
+          SNI: 
+          Path: 
+          Dest: 80 
+          ProxyProtocolVer: 0 
+      CertConfig:
+        CertMode: dns
+        CertDomain: "ws.hello4g.pw" 
+        CertFile: ./cert/node1.test.com.cert 
+        KeyFile: ./cert/node1.test.com.key
+        Provider: cloudflare
+        Email: xtiepvn@gmail.com
+        DNSEnv: 
+          CLOUDFLARE_EMAIL: xtiepvn@gmail.com
+          CLOUDFLARE_API_KEY: 022300fd43d2510b9d7fe51aa9fcc8096a5af

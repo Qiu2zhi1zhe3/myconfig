@@ -1,0 +1,82 @@
+alias tt="python3 $HOME/cal.py"
+#System    
+alias q="exit"
+alias c="clear"
+alias sd="cd /sdcard"
+alias pf="cd $PREFIX"
+
+#Package Manager
+alias pg="apt upgrade -y"
+alias pd="apt update"
+alias pu="apt update && apt upgrade -y"
+
+#Convert Video
+alias convi="ffmpeg -i $1 -c:v libx264 -crf 25 $2"
+
+#Ping    
+alias pig="ping google.com"
+
+
+#archives .deb
+alias archives="cd /data/data/com.termux/cache/apt/archives/"
+
+#Photos
+alias ss="cd /sdcard/Pictures/Screenshots/"
+
+#Movies
+alias ms="cd /sdcard/Movies"
+
+#Downloads
+alias dl="cd /sdcard/Download"
+
+#Documents
+alias ds="cd /sdcard/Documents"
+
+#Largest Files
+alias largefile="du -h -x -s -- * | sort -r -h | head -20"
+
+#System Information
+
+alias ls="exa --icons"
+alias la="exa --icons -lgha --group-directories-first"
+alias lt="exa --icons --tree"
+alias lta="exa --icons --tree -lgha"
+
+#proot-distro
+alias prot="cd $PREFIX/var/lib/proot-distro"
+alias protlogin="proot-distro login $1"
+
+#Magick
+alias listfont="magick convert -list font | grep -iE 'font:.*'"
+
+## Configuration
+
+
+#zsh
+alias zshconf="nvim ~/.zshrc"
+
+
+#Web Server (Require install LAMP on Termux) https://github.com/xshin404/lampTermux
+alias apaconf="nvim $PREFIX/etc/apache2/httpd.conf"
+alias phpmyadminconf="nvim $PREFIX/etc/phpmyadmin/config.inc.php"
+
+#Refresh
+alias refresh="source $HOME/.zshrc"
+
+#Unsource
+alias unsource="exec $SHELL -l"
+
+
+
+#termux-reload
+alias reload="termux-reload-settings"
+
+#termux-setting
+alias termconf="nvim ~/.termux/termux.properties"
+
+#termux-permission
+alias termper="termux-setup-storage"
+
+alias aliasconf="nvim ~/.aliases"
+alias startconf="nvim ~/.autostart"
+
