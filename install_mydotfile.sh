@@ -58,10 +58,10 @@ fi
 install_base() {
     if [[ x"${release}" == x"centos" ]]; then
     	yum update && yum upgrade -y
-        yum install wget curl tar git zsh vim python3  -y
+        yum install wget curl tar git zsh vim -y
     else
     	apt update && apt upgrade -y
-        apt install wget curl tar git zsh vim  -y
+        apt install wget curl tar git zsh vim -y
     fi
 }
 install_mydotfile() {

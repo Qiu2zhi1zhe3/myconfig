@@ -11,17 +11,17 @@ version="v1.0.0"
 show_menu() {
 	clear
     echo -e "
-    Cấu hình cài đặt ${plain}
-    ${green}--- [Vui lòng chọn hệ điều hành] ---${plain}
-    0. Thoát cài đặt
-————————————————————————————————
-    1. Android
-    2. Linux
-———————————————————————————————— "
+    ${green}   	    Cấu hình cài đặt ${plain}
+    ${green}	 --- [Vui lòng chọn] ---${plain}
+${green}———————————————————————————————————————${plain}
+	    0. Thoát cài đặt
+	    1. Setup Android
+	    2. Setup Linux
+${green}———————————————————————————————————————${plain}"
  echo && read -p "  Vui lòng nhập một lựa chọn [0-13]: " num
 
     case "${num}" in
-        0) exit
+        0) clear && exit
         ;;
         1) android
         ;;
@@ -39,7 +39,7 @@ android() {
 	apt install wget git zsh vim tsu tmux exa -y
 	chsh -s zsh
 	git clone https://github.com/Qiu2zhi1zhe3/myconfig
-	cd mydotfile
+	cd myconfig
 	cp -rf .local .oh-my-zsh .aliases .autostart .gitconfig .vimrc .tmux.conf .zshrc ../
 }
 
